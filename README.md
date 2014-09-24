@@ -1,6 +1,6 @@
 # redmine start page - Redmine plugin
 
-This plugin redirects the user, just after he has logged, to the URL defined in settings. When auto-logged-out the user will be redirected to the page he last visited. If the redirect url is not defined (default), the behaviour is as usual.
+This plugin redirects the user, just after he has logged in, to the URL defined in settings. When auto-logged-out the user will be redirected to the page he last visited. If the redirect url is not defined (default), the behaviour is as usual.
 
 ## Installation
 
