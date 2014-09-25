@@ -15,8 +15,10 @@ module Hooks
   class Hooks < Redmine::Hook::ViewListener
      def controller_account_success_authentication_after(context={})
          startPage_url = Setting[:plugin_redmine_start_page][:startPage]
-         if context[:request].params[:back_url].end_with?("#{Setting.host_name}/")
-           context[:request].params[:back_url] = startPage_url
+         if context[:request].params[:back_url]
+           if context[:request].params[:back_url].end_with?("#{Setting.host_name}/")
+             context[:request].params[:back_url] = startPage_url
+           end
          end
          return ''
      end
