@@ -18,7 +18,7 @@ module Hooks
          Rails.logger.info context[:request].params[:back_url]
          Rails.logger.info "Hostneme: " 
          Rails.logger.info "#{Setting.protocol}://#{Setting.host_name}"
-         if context[:request].params[:back_url] == "#{Setting.protocol}://#{Setting.host_name}/"
+         if context[:request].params[:back_url].include? "#{Setting.host_name}/"
            context[:request].params[:back_url] = startPage_url
          end
          return ''
