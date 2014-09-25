@@ -12,4 +12,4 @@ Restart Redmine's server.
 
 Go to `Administration` > `Plugins` > `Configure` to set the URL for the new start page.
 
-Enter the relative URL beginning with a slash (/my/page) or the absolute, FQDN URL (http://www.example.com/landing-page)
+Enter the relative URL beginning with a slash (/my/page) or the absolute, FQDN URL (http://www.intersolve.de)
