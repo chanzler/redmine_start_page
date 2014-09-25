@@ -15,9 +15,6 @@ module Hooks
   class Hooks < Redmine::Hook::ViewListener
      def controller_account_success_authentication_after(context={})
          startPage_url = Setting[:plugin_redmine_start_page][:startPage]
-         Rails.logger.info context[:request].params[:back_url]
-         Rails.logger.info "Hostneme: " 
-         Rails.logger.info "#{Setting.protocol}://#{Setting.host_name}"
          if context[:request].params[:back_url].include? "#{Setting.host_name}/"
            context[:request].params[:back_url] = startPage_url
          end
